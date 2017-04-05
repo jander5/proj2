@@ -1588,7 +1588,7 @@ pre code {
   margin-left: auto;
   color: #444545;
 }
-@media (min-width: 768px) {
+@media (min-width: 868px) {
   .container {
     width: 750px;
   }
@@ -2556,7 +2556,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 67%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -6818,6 +6818,28 @@ button.close {
 
 body {
   background-color: #d7d7d7;
+}
+
+.required:before {
+  color: red;
+  content: "*";
+}
+
+.img-responsive {
+  display: block;
+  height: 150;
+  max-width: 100%;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .slider-size {
+    height: auto;
+  }
+  .slider-size > img {
+    width: 80%;
+  }
 }
 
 
