@@ -10,11 +10,6 @@
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
    <link rel="stylesheet" href="css/normalize.css">
    <link href="css/bootstrap.css" rel="stylesheet"> 
-   <style >
-     .caps{
-      display: none;
-     }
-   </style>
   </head>
 
   <body style="padding-top: 65px">
@@ -61,40 +56,54 @@
       <div style="text-align: center;"><h6>Click on the images below to find out why</h6></div>
       
       <div class="container">
-      <a href="#" class="gallery">
+      <a href="javascript: text(1);">
       <img src="img/vic1.jpg"></a>
-      <div class ="caps"><h3>New York Stops Another Fracking Pipeline</h3><p>Responding to sustained pressure from grassroots activists, the Cuomo administration refuses to grant a water permit for a massive fracked gas pipeline.</p></div>
+      <div id="div"></div>
       </div>
 
        <div class="container">
-      <a href="#" class="gallery">
+      <a href="javascript: text2(1);">
       <img src="img/vic2.jpeg"></a>
-      <div class ="caps"><h3>Banning Fracking Waste in Connecticut, One Town at a Time</h3><p>After failing to win a statewide ban on fracking waste, we didn’t give up. We organized.</p></div>
+      <div id="div2"></div>
       </div>
 
        <div class="container">
-      <a href="#" class="gallery">
+      <a href="javascript: text3(1);">
       <img src="img/vic3.jpeg"></a>
-      <div class ="caps"><h3>Banning Fracking Waste in Connecticut, One Town at a Time</h3><p>After failing to win a statewide ban on fracking waste, we didn’t give up. We organized.</p></div>
+      <div id="div"></div>
       </div>
 
-      
+      <div id="div3"></div>
       </div>
        <script>
-          var g = document.querySelectorAll('.gallery');
+         function text(value) {
+    var div = document.getElementById("div");
+    var text = "";
 
-          for (i = 0; i < g.length; ++i){
-            g[i].onclick = function(){
-              var caps = this.nextElementSibling;
-              if (caps.style.display === 'none' || caps.style.display === ''){
-                caps.style.display = "block";
-              } else {
-                caps.style.display = "none";
-              }
-              return false;
-            }
+    if (value == 1) text += "<h3>New York Stops Another Fracking Pipeline</h3>" + "<p>Responding to sustained pressure from grassroots activists, the Cuomo administration refuses to grant a water permit for a massive fracked gas pipeline.</p>";
+    
+    div.innerHTML = text;
+    }
 
-          }
+     function text2(value) {
+    var div2 = document.getElementById("div2");
+    var text2 = "";
+
+    if (value == 1) text2 += "<h3>Banning Fracking Waste in Connecticut, One Town at a Time</h3>" + "<p>After failing to win a statewide ban on fracking waste, we didn’t give up. We organized.</p>";
+    
+    div2.innerHTML = text2;
+    }
+
+    function text3(value) {
+    var div3 = document.getElementById("div3");
+    var text3 = "";
+
+    if (value == 1) text3 += "<h3>Banning Fracking Waste in Connecticut, One Town at a Time</h3>" + "<p>After failing to win a statewide ban on fracking waste, we didn’t give up. We organized.</p>";
+    //if (value == 2) text += "this is two";
+    //if (value == 3) text += "this is tree";
+
+    div3.innerHTML = text3;
+    }
 
        </script>
        <hr>
